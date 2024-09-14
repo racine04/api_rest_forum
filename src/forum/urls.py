@@ -8,5 +8,5 @@ app_name = 'api_forum'
 
 urlpatterns = [
     path('forum/', forum_list, name="forum"),
-    path('forum/int:pk/', forum_detail, name="forumdetail"),
+    path('forum/<int:pk>/', forum_detail, name="forumdetail"),
 ]
