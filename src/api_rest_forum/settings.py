@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'api_rest_forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'api_rest_forum_bd',
-        'USER': 'postgres',
-        'PASSWORD': 'Pipi1306',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 

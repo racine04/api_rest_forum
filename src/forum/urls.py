@@ -1,16 +1,12 @@
 from django.urls import path
 
 from django.urls import include
-from rest_framework import routers
 
-from forum.view_set import ForumViewSet
-
-
-router = routers.DefaultRouter()
-router.register(r'', ForumViewSet)
+from forum.api_views import forum_detail, forum_list
 
 app_name = 'api_forum'
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('forum/', forum_list, name="forum"),
+    path('forum/int:pk/', forum_detail, name="forumdetail"),
 ]

@@ -20,6 +20,7 @@ urlpatterns = [
 
         path('api/',include([
             path('',include('message.urls')),
+            path('',include('forum.urls')),
         ])),
 
 ]
