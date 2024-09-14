@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #bibliotheque
 
     'rest_framework',
+    'django_seed',
 
     #nos apps
 
@@ -86,12 +87,12 @@ WSGI_APPLICATION = 'api_rest_forum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'api_rest_forum_bd',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'postgres',
+        'PASSWORD': 'Pipi1306',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 
