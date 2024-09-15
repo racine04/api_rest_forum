@@ -1,6 +1,5 @@
 from django.urls import path, include
 from rest_framework import routers
-from .viewset import SujetViewset
 from .api_view import sujet_list, sujet_detail
 
 

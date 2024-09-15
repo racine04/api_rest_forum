@@ -6,10 +6,10 @@ from .serializers import SujetSerializer
 
 
 @csrf_exempt
-def sujet_list(request):
+def sujet_list(request, forum_id):
     if request.method == 'GET':
 
-        subjects = SujetModel.objects.all()
+        subjects = SujetModel.objects.filter(forum=forum_id)
         serializer = SujetSerializer(subjects, many=True)
         return JsonResponse(serializer.data, safe=False)
 
@@ -35,15 +35,3 @@ def sujet_detail(request, pk):
     if request.method == 'GET':
         serializer = SujetSerializer(subject)
         return JsonResponse(serializer.data)
-
-    elif request.method == 'PUT':
-        data = JSONParser().parse(request)
-        serializer = SujetSerializer(subject, data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors, status=400)
-
-    elif request.method == 'DELETE':
-        subject.delete()
-        return HttpResponse(status=204)
