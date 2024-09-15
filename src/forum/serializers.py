@@ -6,4 +6,5 @@ class ForumSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ForumModel
-        fields= ['title', 'description']
+        fields= "__all__"
+        read_only_fields = ['created_at', 'updated_at', 'status']
