@@ -2,6 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from .models import SujetModel
+from forum.models import ForumModel
 from .serializers import SujetSerializer
 
 
@@ -14,14 +15,12 @@ def sujet_list(request, forum_id):
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
-
         data = JSONParser().parse(request)
         serializer = SujetSerializer(data=data)
-
+        forum = ForumModel.objects.get(id=forum_id)
         if serializer.is_valid():
-            serializer.save()
+            serializer.save(forum=forum)
             return JsonResponse(serializer.data, status=201)
-
         return JsonResponse(serializer.errors, status=400)
 
 

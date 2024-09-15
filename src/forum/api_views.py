@@ -1,7 +1,6 @@
 from django.http import HttpResponse, JsonResponse
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
-
 from forum.models import ForumModel
 from forum.serializers import ForumSerializer
 
@@ -10,12 +9,11 @@ from forum.serializers import ForumSerializer
 
 
 @csrf_exempt
-
 def forum_list(request):
 
     if request.method == "GET":
-        student = ForumModel.objects.all()
-        serializer= ForumSerializer(student, many=True)
+        forums = ForumModel.objects.all()
+        serializer= ForumSerializer(forums, many=True)
         return JsonResponse(serializer.data, safe=False)
     
     elif request.method == "POST":
@@ -27,13 +25,12 @@ def forum_list(request):
         return JsonResponse(serializer.errors, status=400)
 
 
-@csrf_exempt
 def forum_detail(request, pk):
     try:
-        user = ForumModel.objects.get(pk=pk)
+        forum = ForumModel.objects.get(pk=pk)
     except ForumModel.DoesNotExist:
         return HttpResponse(status=404)
     
     if request.method == "GET":
-        serializer = ForumSerializer(user)
+        serializer = ForumSerializer(forum)
         return JsonResponse(serializer.data)

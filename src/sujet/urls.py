@@ -3,14 +3,10 @@ from rest_framework import routers
 from .api_view import sujet_list, sujet_detail
 
 
-app_name = 'api_sujet'
 
-router = routers.DefaultRouter()
-router.register(r'sujets', SujetViewset)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('subjects/', sujet_list),
-    path('subjects/<int:pk>/', sujet_detail),
+     path('subjects/<int:forum_id>/forum', sujet_list),
+    path('subjects/<int:pk>/detail', sujet_detail),
 ]

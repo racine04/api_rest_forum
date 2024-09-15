@@ -21,6 +21,7 @@ urlpatterns = [
         path('api/',include([
             path('',include('message.urls')),
             path('',include('forum.urls')),
+            path('',include('sujet.urls'))
         ])),
 
 ]
