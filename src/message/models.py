@@ -7,7 +7,7 @@ from base.models.helpers.named_date_time_model import NamedDateTimeModel
 
 class MessageModel(NamedDateTimeModel):
     post = models.CharField(max_length=255, null=True)
-    subject = models.ForeignKey(SujetModel, on_delete=models.CASCADE, related_name="sujet_message_id", null= True)
+    subject = models.ForeignKey(SujetModel, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.post
