@@ -8,16 +8,21 @@ from .serializers import SujetSerializer
 
 @csrf_exempt
 def sujet_list(request, forum_id):
+    try:
+        forum = ForumModel.objects.get(pk=forum_id)
+    except ForumModel.DoesNotExist:
+        return HttpResponse(status=404)
+
     if request.method == 'GET':
 
-        subjects = SujetModel.objects.filter(forum=forum_id)
+        subjects = SujetModel.objects.filter(forum=forum.id)
         serializer = SujetSerializer(subjects, many=True)
         return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
         serializer = SujetSerializer(data=data)
-        forum = ForumModel.objects.get(id=forum_id)
+        forum = ForumModel.objects.get(id=forum.id)
         if serializer.is_valid():
             serializer.save(forum=forum)
             return JsonResponse(serializer.data, status=201)

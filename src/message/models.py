@@ -1,13 +1,13 @@
 from django.db import models
 from sujet.models import SujetModel
-from base.models.helpers.named_date_time_model import NamedDateTimeModel
+from base.models.helpers.date_time_model import DateTimeModel
 
 
 # Create your models here.
 
-class MessageModel(NamedDateTimeModel):
-    post = models.CharField(max_length=255, null=True)
-    subject = models.ForeignKey(SujetModel, on_delete=models.CASCADE, null=True)
+class MessageModel(DateTimeModel):
+    subject = models.ForeignKey(SujetModel, on_delete=models.CASCADE)
+    post = models.CharField(max_length=255)
 
     def __str__(self):
         return self.post

@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="503ddf38-9095-4a96-a72e-f9d653dbfc13" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_rest_forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_rest_forum/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/models/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/models/helpers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/models/helpers/named_date_time_model.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/forum/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/forum/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/forum/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/forum/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/api_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/api_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/message/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sujet/api_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sujet/api_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sujet/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sujet/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sujet/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sujet/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +35,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ekrap/Desktop/ATOS/EtabV1.4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ekrap/Desktop/api_rest_forum/src/manage.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <module name="api_rest_forum" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\ekrap\Desktop\api_rest_forum\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (api_rest_forum)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,7 +84,9 @@
       <updated>1726433011599</updated>
       <workItem from="1726433013863" duration="1245000" />
       <workItem from="1726436327568" duration="193000" />
-      <workItem from="1726471964739" duration="1989000" />
+      <workItem from="1726471964739" duration="2953000" />
+      <workItem from="1726480361622" duration="1052000" />
+      <workItem from="1726494127704" duration="7606000" />
     </task>
     <servers />
   </component>
@@ -56,6 +94,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/api_rest_forum$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1726408761661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/api_rest_forum$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1726504123174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

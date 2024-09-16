@@ -18,10 +18,10 @@ from django.urls import include, path
 
 urlpatterns = [
 
-        path('api/',include([
-            path('',include('message.urls')),
-            path('',include('forum.urls')),
-            path('',include('sujet.urls'))
-        ])),
+    path('api/', include([
+        path('', include('message.urls')),
+        path('', include('forum.urls')),
+        path('', include('sujet.urls'))
+    ])),
 
 ]
